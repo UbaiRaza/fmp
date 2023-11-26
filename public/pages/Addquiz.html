@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-database.js"></script>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <title>Hello, world!</title>
+  </head>
+  <body class="bg-info">
+    <h1 class="text-center p-5">Add Quiz!</h1>
+    <div  class="container">
+      <div class="p-2">
+        <h3>Question</h3>
+        <textarea
+          placeholder="Enter question"
+          name=""
+          id="question"
+          class="p-2 fs-5 border-0 shadow bg-white rounded w-100"
+          cols="30"
+          rows="5"
+        ></textarea>
+      </div>
+      <div class="p-2">
+        <div>
+          <h3>Option</h3>
+          <input
+            id="option"
+            placeholder="Enter option"
+            type="text"
+            class="p-2 fs-5 border-0 shadow bg-white rounded w-100"
+            name=""
+            id=""
+          />
+          <br /><br />
+          <button onclick="render()" class="btn btn-dark">Add</button>
+        </div>
+        <div>
+          <ol id="optionsParent"></ol>
+        </div>
+        <div>
+          <p id="corectAnswer" class="bg-success p-3 fs-5 text-white">
+            Corect Answer
+          </p>
+        </div>
+        <div>
+          <button onclick="submitQuestion()" class="btn btn-dark">
+            Submit Question
+          </button>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="addquiz.js"></script>
+  </body>
+</html>
